@@ -23,13 +23,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhW-Rj-mHZ">
-                                <rect key="frame" x="30" y="574" width="333" height="22.333333333333371"/>
+                                <rect key="frame" x="30" y="481" width="333" height="22.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmP-Ko-zJn">
-                                <rect key="frame" x="120" y="473" width="153" height="61"/>
+                                <rect key="frame" x="120" y="380" width="153" height="61"/>
                                 <color key="backgroundColor" red="0.56074248804895455" green="0.98829740290000001" blue="0.90513785942908509" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KmP-Ko-zJn" secondAttribute="height" multiplier="153:61" id="46J-bB-UqU"/>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wik-jk-7Sl">
-                                <rect key="frame" x="120" y="616.33333333333337" width="153" height="61.333333333333371"/>
+                                <rect key="frame" x="120" y="523.33333333333337" width="153" height="61.333333333333371"/>
                                 <color key="backgroundColor" red="0.56074248800000004" green="0.98829740290000001" blue="0.90513785940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Wik-jk-7Sl" secondAttribute="height" multiplier="5:2" id="nGS-nN-XCq"/>
@@ -59,16 +59,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quiz_pic" translatesAutoresizingMaskIntoConstraints="NO" id="Kva-Wp-iw6">
-                                <rect key="frame" x="40" y="99" width="313" height="273"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Sb9-WG-kGX"/>
-                                </constraints>
+                                <rect key="frame" x="40" y="99" width="313" height="180"/>
                             </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xHe-xV-Dfb">
-                                <rect key="frame" x="120" y="717.66666666666663" width="153" height="4"/>
+                                <rect key="frame" x="120" y="624.66666666666663" width="153" height="4"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqN-mh-f9Q">
-                                <rect key="frame" x="80" y="741.66666666666663" width="233" height="23.666666666666629"/>
+                                <rect key="frame" x="80" y="648.66666666666663" width="233" height="23.666666666666629"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
