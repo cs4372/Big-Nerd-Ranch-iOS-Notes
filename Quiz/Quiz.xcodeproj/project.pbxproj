@@ -11,9 +11,9 @@
 		478BE9D029556EA600DF0B71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478BE9CF29556EA600DF0B71 /* SceneDelegate.swift */; };
 		478BE9D229556EA600DF0B71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478BE9D129556EA600DF0B71 /* ViewController.swift */; };
 		478BE9D529556EA600DF0B71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478BE9D329556EA600DF0B71 /* Main.storyboard */; };
-		478BE9D729556EA700DF0B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478BE9D629556EA700DF0B71 /* Assets.xcassets */; };
 		478BE9DA29556EA700DF0B71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478BE9D829556EA700DF0B71 /* LaunchScreen.storyboard */; };
 		478BE9E229556F7400DF0B71 /* Notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 478BE9E129556F7400DF0B71 /* Notes.md */; };
+		478BE9E329557F6100DF0B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478BE9D629556EA700DF0B71 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,7 +130,7 @@
 			files = (
 				478BE9E229556F7400DF0B71 /* Notes.md in Resources */,
 				478BE9DA29556EA700DF0B71 /* LaunchScreen.storyboard in Resources */,
-				478BE9D729556EA700DF0B71 /* Assets.xcassets in Resources */,
+				478BE9E329557F6100DF0B71 /* Assets.xcassets in Resources */,
 				478BE9D529556EA600DF0B71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
