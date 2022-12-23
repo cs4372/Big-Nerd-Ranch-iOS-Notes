@@ -11,8 +11,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        quizReset()
+    }
+    
+    func quizReset() {
         progressBar.progress = 0
+        questionLabel.text = questions[currentQuestionIndex]
         questionNumber.text = "Question \(currentQuestionIndex+1)"
     }
 
@@ -21,7 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet var progressBar: UIProgressView!
     @IBOutlet var questionNumber: UILabel!
     
-    let questions: [String] = [
+    var questions: [String] = [
            "What is 7+7?",
            "What is the capital of Vermont?",
            "What is cognac made from?",
@@ -37,23 +41,25 @@ class ViewController: UIViewController {
            "Australia",
            "Sodium"
     ]
+    var progressUnits: Float {
+        get {
+            return Float(1)/Float(questions.count-1)
+        }
+    }
     var currentQuestionIndex = 0
     
     @IBAction func showNextQuestion(_ sender: UIButton) {
-        let progressUnits = Float(1)/Float(questions.count)
         currentQuestionIndex+=1
-        questionNumber.text = "Question \(currentQuestionIndex+1)"
+        progressBar.progress += progressUnits
+
         if currentQuestionIndex == questions.count {
-            currentQuestionIndex = -1
-        } else{
-            let currQuestion = questions[currentQuestionIndex]
-            questionLabel.text = currQuestion
-        }
-        if progressBar.progress < 1 {
-            progressBar.progress += progressUnits
-        } else {
+            currentQuestionIndex = 0
             progressBar.progress = 0
         }
+        questionNumber.text = "Question \(currentQuestionIndex+1)"
+        answerLabel.text = "???"
+            let currQuestion = questions[currentQuestionIndex]
+            questionLabel.text = currQuestion
 
     }
     @IBAction func showAnswer(_ sender: UIButton) {
@@ -61,4 +67,3 @@ class ViewController: UIViewController {
         answerLabel.text = currAnswer
     }
 }
-
