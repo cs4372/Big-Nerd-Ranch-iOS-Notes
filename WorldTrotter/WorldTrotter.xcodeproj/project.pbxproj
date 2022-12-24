@@ -14,6 +14,8 @@
 		478BE9FA2956841000DF0B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478BE9F92956841000DF0B71 /* Assets.xcassets */; };
 		478BE9FD2956841000DF0B71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478BE9FB2956841000DF0B71 /* LaunchScreen.storyboard */; };
 		478BEA052956CD7400DF0B71 /* Notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 478BEA042956CD7400DF0B71 /* Notes.md */; };
+		478BEA09295773D400DF0B71 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478BEA07295773CA00DF0B71 /* MapKit.framework */; };
+		478BEA0D295776E800DF0B71 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478BEA0C295776E800DF0B71 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		478BE9FC2956841000DF0B71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		478BE9FE2956841000DF0B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		478BEA042956CD7400DF0B71 /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
+		478BEA07295773CA00DF0B71 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		478BEA0C295776E800DF0B71 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				478BEA09295773D400DF0B71 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +50,7 @@
 				478BEA042956CD7400DF0B71 /* Notes.md */,
 				478BE9EF2956840F00DF0B71 /* WorldTrotter */,
 				478BE9EE2956840F00DF0B71 /* Products */,
+				478BEA06295773CA00DF0B71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +65,7 @@
 		478BE9EF2956840F00DF0B71 /* WorldTrotter */ = {
 			isa = PBXGroup;
 			children = (
+				478BEA0C295776E800DF0B71 /* MapViewController.swift */,
 				478BE9F02956840F00DF0B71 /* AppDelegate.swift */,
 				478BE9F22956840F00DF0B71 /* SceneDelegate.swift */,
 				478BE9F42956840F00DF0B71 /* ConversionViewController.swift */,
@@ -68,6 +75,14 @@
 				478BE9FE2956841000DF0B71 /* Info.plist */,
 			);
 			path = WorldTrotter;
+			sourceTree = "<group>";
+		};
+		478BEA06295773CA00DF0B71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				478BEA07295773CA00DF0B71 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +160,7 @@
 				478BE9F52956840F00DF0B71 /* ConversionViewController.swift in Sources */,
 				478BE9F12956840F00DF0B71 /* AppDelegate.swift in Sources */,
 				478BE9F32956840F00DF0B71 /* SceneDelegate.swift in Sources */,
+				478BEA0D295776E800DF0B71 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +310,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorldTrotter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -321,7 +337,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorldTrotter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
