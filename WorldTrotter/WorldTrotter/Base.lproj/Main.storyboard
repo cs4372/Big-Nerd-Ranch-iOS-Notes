@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sW7-jM-Mos">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -40,8 +41,8 @@
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tas-h6-o2h">
-                                <rect key="frame" x="104" y="119" width="185" height="91.333333333333314"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tas-h6-o2h">
+                                <rect key="frame" x="18.666666666666657" y="119" width="356" height="91.333333333333314"/>
                                 <color key="textColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="70"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -96,6 +97,16 @@
             </objects>
             <point key="canvasLocation" x="1172" y="75"/>
         </scene>
+        <!--WKWebView-->
+        <scene sceneID="oXh-AT-5oH">
+            <objects>
+                <viewController id="AUk-dw-aSr" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="WKWebView" id="XYQ-eO-6cL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saR-L6-TwY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893.8931297709923" y="74.647887323943664"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="I2e-HN-JcP">
             <objects>
@@ -108,6 +119,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="9X6-Fo-bAd"/>
                         <segue destination="DRj-rf-fpK" kind="relationship" relationship="viewControllers" id="Ro7-G5-6zM"/>
+                        <segue destination="AUk-dw-aSr" kind="relationship" relationship="viewControllers" id="tNi-9t-EyN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHr-Et-7Eh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
