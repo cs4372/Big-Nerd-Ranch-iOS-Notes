@@ -8,6 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Set the label's initial alpha
+        nextQuestionLabel.alpha = 0
+        animateLabelTransitions()
+        currentQuestionLabel.text = questions[currentQuestionIndex]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,14 +24,16 @@ class ViewController: UIViewController {
     
     func quizReset() {
         progressBar.progress = 0
-        questionLabel.text = questions[currentQuestionIndex]
-        questionNumber.text = "Question \(currentQuestionIndex+1)"
+        currentQuestionLabel.text = questions[currentQuestionIndex]
+        currentQuestionLabel.text = "Question \(currentQuestionIndex+1)"
     }
 
-    @IBOutlet var questionLabel: UILabel!
+//    @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerLabel: UILabel!
     @IBOutlet var progressBar: UIProgressView!
     @IBOutlet var questionNumber: UILabel!
+    @IBOutlet var currentQuestionLabel: UILabel!
+    @IBOutlet var nextQuestionLabel: UILabel!
     
     var questions: [String] = [
            "What is 7+7?",
@@ -58,12 +68,21 @@ class ViewController: UIViewController {
         }
         questionNumber.text = "Question \(currentQuestionIndex+1)"
         answerLabel.text = "???"
-            let currQuestion = questions[currentQuestionIndex]
-            questionLabel.text = currQuestion
+        let question = questions[currentQuestionIndex]
+        nextQuestionLabel.text = question
+        animateLabelTransitions()
 
     }
     @IBAction func showAnswer(_ sender: UIButton) {
         let currAnswer = answers[currentQuestionIndex]
         answerLabel.text = currAnswer
+    }
+    
+    func animateLabelTransitions() {
+        // Animate the alpha
+        UIView.animate(withDuration: 0.5, animations: {
+            self.currentQuestionLabel.alpha = 0
+            self.nextQuestionLabel.alpha = 1
+        })
     }
 }
