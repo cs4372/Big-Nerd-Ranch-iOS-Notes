@@ -15,9 +15,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="jhf-yi-0B9">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTO-uN-jJs">
+                                    <rect key="frame" x="20" y="15" width="172.66666666666666" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="OVv-gv-vZG"/>
+                                        <constraint firstAttribute="width" constant="54" id="fmH-vb-S6T"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="m4u-Dk-bNN"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                    <connections>
+                                        <action selector="toggleEditingMode:" destination="Uiy-gV-jLW" eventType="touchDown" id="cI4-eK-7IY"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsn-gM-NaW">
+                                    <rect key="frame" x="200.66666666666663" y="15" width="172.33333333333337" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="JCh-Bh-pJv"/>
+                                        <constraint firstAttribute="width" constant="55" id="dWl-Dz-5Te"/>
+                                        <constraint firstAttribute="height" constant="30" id="nYF-0o-nSV"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                    <connections>
+                                        <action selector="addNewItem:" destination="Uiy-gV-jLW" eventType="touchDown" id="GmY-xN-IAp"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="xsn-gM-NaW" secondAttribute="trailing" constant="8" id="6uh-g8-nCe"/>
+                                <constraint firstItem="xsn-gM-NaW" firstAttribute="leading" secondItem="LTO-uN-jJs" secondAttribute="trailing" constant="20" id="8N6-d3-lpj"/>
+                                <constraint firstItem="LTO-uN-jJs" firstAttribute="top" secondItem="jhf-yi-0B9" secondAttribute="top" constant="20" id="Cgj-Pk-msJ"/>
+                                <constraint firstAttribute="bottom" secondItem="xsn-gM-NaW" secondAttribute="bottom" constant="20" id="F9m-WZ-3df"/>
+                                <constraint firstAttribute="trailing" secondItem="xsn-gM-NaW" secondAttribute="trailing" constant="20" id="GFu-5B-zCd"/>
+                                <constraint firstAttribute="bottom" secondItem="LTO-uN-jJs" secondAttribute="bottom" constant="15" id="QWy-Bc-8ch"/>
+                                <constraint firstItem="LTO-uN-jJs" firstAttribute="leading" secondItem="jhf-yi-0B9" secondAttribute="leading" constant="8" id="VKQ-CX-uyD"/>
+                                <constraint firstItem="xsn-gM-NaW" firstAttribute="top" secondItem="jhf-yi-0B9" secondAttribute="top" constant="20" id="YzG-04-mHZ"/>
+                                <constraint firstItem="xsn-gM-NaW" firstAttribute="leading" secondItem="LTO-uN-jJs" secondAttribute="trailing" constant="8" id="c59-Rc-oVW"/>
+                                <constraint firstAttribute="bottom" secondItem="LTO-uN-jJs" secondAttribute="bottom" constant="20" id="dft-u9-7hJ"/>
+                                <constraint firstItem="xsn-gM-NaW" firstAttribute="width" secondItem="LTO-uN-jJs" secondAttribute="width" id="gCI-DA-4pc"/>
+                                <constraint firstItem="xsn-gM-NaW" firstAttribute="top" secondItem="jhf-yi-0B9" secondAttribute="top" constant="15" id="iaz-j7-xMa"/>
+                                <constraint firstAttribute="bottom" secondItem="xsn-gM-NaW" secondAttribute="bottom" constant="15" id="l21-Cc-ZBn"/>
+                                <constraint firstItem="LTO-uN-jJs" firstAttribute="top" secondItem="jhf-yi-0B9" secondAttribute="top" constant="15" id="n48-PK-iRa"/>
+                                <constraint firstItem="xsn-gM-NaW" firstAttribute="centerY" secondItem="jhf-yi-0B9" secondAttribute="centerY" id="nJ8-wq-Ip2"/>
+                                <constraint firstItem="LTO-uN-jJs" firstAttribute="leading" secondItem="jhf-yi-0B9" secondAttribute="leading" constant="20" id="oWW-FV-W8l"/>
+                                <constraint firstItem="LTO-uN-jJs" firstAttribute="centerY" secondItem="jhf-yi-0B9" secondAttribute="centerY" id="whE-yI-RjU"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ujK-km-kDs">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="ujK-km-kDs">
+                                <rect key="frame" x="0.0" y="110" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ujK-km-kDs" id="lfe-AV-Ebh">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
@@ -33,7 +85,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wku-0r-PoM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="-65"/>
+            <point key="canvasLocation" x="-95.419847328244273" y="-65.492957746478879"/>
         </scene>
     </scenes>
     <resources>
