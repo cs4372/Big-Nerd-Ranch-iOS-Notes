@@ -19,6 +19,8 @@
 		476ACA82295A2D9400210A27 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA81295A2D9400210A27 /* ItemsViewController.swift */; };
 		476ACA84295A2E2500210A27 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA83295A2E2400210A27 /* Item.swift */; };
 		476ACA86295A2F9E00210A27 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA85295A2F9E00210A27 /* ItemStore.swift */; };
+		476ACA88295CF89B00210A27 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA87295CF89B00210A27 /* ItemCell.swift */; };
+		476ACA8A295D20DC00210A27 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA89295D20DC00210A27 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		476ACA81295A2D9400210A27 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		476ACA83295A2E2400210A27 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		476ACA85295A2F9E00210A27 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		476ACA87295CF89B00210A27 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		476ACA89295D20DC00210A27 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				476ACA81295A2D9400210A27 /* ItemsViewController.swift */,
 				476ACA83295A2E2400210A27 /* Item.swift */,
 				476ACA85295A2F9E00210A27 /* ItemStore.swift */,
+				476ACA87295CF89B00210A27 /* ItemCell.swift */,
+				476ACA89295D20DC00210A27 /* DetailViewController.swift */,
 			);
 			path = Homeowner;
 			sourceTree = "<group>";
@@ -271,8 +277,10 @@
 				476ACA56295A2CD400210A27 /* ViewController.swift in Sources */,
 				476ACA86295A2F9E00210A27 /* ItemStore.swift in Sources */,
 				476ACA82295A2D9400210A27 /* ItemsViewController.swift in Sources */,
+				476ACA88295CF89B00210A27 /* ItemCell.swift in Sources */,
 				476ACA52295A2CD400210A27 /* AppDelegate.swift in Sources */,
 				476ACA54295A2CD400210A27 /* SceneDelegate.swift in Sources */,
+				476ACA8A295D20DC00210A27 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

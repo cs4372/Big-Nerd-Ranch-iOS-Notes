@@ -34,6 +34,7 @@ class Item: NSObject {
             let randomValue = Int(arc4random_uniform(100))
             let randomSerialNumber =
                 UUID().uuidString.components(separatedBy: "-").first!
+            print(randomSerialNumber)
             self.init(name: randomName,
                       valueInDollars: randomValue,
                       serialNumber: randomSerialNumber)

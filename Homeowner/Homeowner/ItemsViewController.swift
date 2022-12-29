@@ -18,6 +18,8 @@ class ItemsViewController: UITableViewController {
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 65
     }
     
     @IBAction func addNewItem(_ sender: UIButton) {
@@ -65,8 +67,9 @@ class ItemsViewController: UITableViewController {
             let deleteAction = UIAlertAction(title: "Remove", style: .destructive, handler: { (action) -> Void in
             // Remove the item from the store self.itemStore.removeItem(item)
                 // Also remove that row from the table view with an animation
-            self.itemStore.removeItem(item)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic) })
+                self.itemStore.removeItem(item)
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            })
             ac.addAction(deleteAction)
             
             present(ac, animated: true, completion: nil)
@@ -88,20 +91,41 @@ class ItemsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView,
             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          // Get a new or recycled cell
-        var cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell",
-           for: indexPath)        // Set the text on the cell with the description of the item
-        cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+        var cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell",
+            for: indexPath) as! ItemCell     // Set the text on the cell with the description of the item
         // that is at the nth index of items, where n = row this cell
         // will appear in on the tableview
         let item = itemStore.allItems[indexPath.row]
         print(item)
-        cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        // Configure the cell with the Item
+         cell.nameLabel.text = item.name
+         cell.serialNumberLabel.text = item.serialNumber
+         cell.valueLabel.text = "$\(item.valueInDollars)"
 //        if indexPath[1] == itemStore.allItems.count-1 {
 //            cell.textLabel?.text = "No more items!"
 //            cell.detailTextLabel?.text = "$0"
 //        }
+        if item.valueInDollars >= 50 {
+            cell.valueLabel.textColor = UIColor.red
+        } else {
+            cell.valueLabel.textColor = UIColor.green
+        }
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // If the triggered segue is the "showItem" segue
+        switch segue.identifier {
+        case "showItem"?:
+            // Figure out which row was just tapped
+            if let row = tableView.indexPathForSelectedRow?.row {
+                // Get the item associated with this row and pass it along
+                let item = itemStore.allItems[row]
+                let detailViewController
+                        = segue.destination as! DetailViewController
+                detailViewController.item = item
+    } default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
+    }
 }
