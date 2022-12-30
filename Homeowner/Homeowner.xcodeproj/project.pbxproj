@@ -21,6 +21,7 @@
 		476ACA86295A2F9E00210A27 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA85295A2F9E00210A27 /* ItemStore.swift */; };
 		476ACA88295CF89B00210A27 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA87295CF89B00210A27 /* ItemCell.swift */; };
 		476ACA8A295D20DC00210A27 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA89295D20DC00210A27 /* DetailViewController.swift */; };
+		476ACA8E295E50C800210A27 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA8D295E50C800210A27 /* DatePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		476ACA85295A2F9E00210A27 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		476ACA87295CF89B00210A27 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		476ACA89295D20DC00210A27 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		476ACA8D295E50C800210A27 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				476ACA85295A2F9E00210A27 /* ItemStore.swift */,
 				476ACA87295CF89B00210A27 /* ItemCell.swift */,
 				476ACA89295D20DC00210A27 /* DetailViewController.swift */,
+				476ACA8D295E50C800210A27 /* DatePickerViewController.swift */,
 			);
 			path = Homeowner;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				476ACA84295A2E2500210A27 /* Item.swift in Sources */,
 				476ACA56295A2CD400210A27 /* ViewController.swift in Sources */,
+				476ACA8E295E50C800210A27 /* DatePickerViewController.swift in Sources */,
 				476ACA86295A2F9E00210A27 /* ItemStore.swift in Sources */,
 				476ACA82295A2D9400210A27 /* ItemsViewController.swift in Sources */,
 				476ACA88295CF89B00210A27 /* ItemCell.swift in Sources */,
@@ -457,6 +461,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9DJ3NHWZB3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Homeowner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -464,6 +469,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,6 +490,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9DJ3NHWZB3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Homeowner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -491,6 +498,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -13,43 +13,31 @@ class ItemsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("inside itemsviewcontroller")
-        // Get the height of the status bar
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
     }
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         let newItem = itemStore.createItem()
          // Figure out where that item is in the array
         let idx = itemStore.allItems.firstIndex(of: newItem)
-        print("idx", idx)
+
         if let index = itemStore.allItems.firstIndex(of: newItem) {
              let indexPath = IndexPath(row: index, section: 0)
-            print("indexPath", indexPath)
              // Insert this new row into the table
              tableView.insertRows(at: [indexPath], with: .automatic)
          }
      }
-        
-        @IBAction func toggleEditingMode(_ sender: UIButton) {
-            // If you are currently in editing mode...
-               if isEditing {
-                   // Change text of button to inform user of state
-                   sender.setTitle("Edit", for: .normal)
-                   // Turn off editing mode
-                   setEditing(false, animated: true)
-               } else {
-                   // Change text of button to inform user of state
-                   sender.setTitle("Done", for: .normal)
-                   // Enter editing mode
-                   setEditing(true, animated: true)
-               }
-            
-    }
     
     override func tableView(_ tableView: UITableView,
                             commit editingStyle: UITableViewCell.EditingStyle,
@@ -96,7 +84,6 @@ class ItemsViewController: UITableViewController {
         // that is at the nth index of items, where n = row this cell
         // will appear in on the tableview
         let item = itemStore.allItems[indexPath.row]
-        print(item)
         // Configure the cell with the Item
          cell.nameLabel.text = item.name
          cell.serialNumberLabel.text = item.serialNumber

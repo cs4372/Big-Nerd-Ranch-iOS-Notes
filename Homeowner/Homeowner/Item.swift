@@ -11,7 +11,7 @@ class Item: NSObject {
     var name: String
     var valueInDollars: Int
     var serialNumber: String?
-    let dateCreated: Date
+    var dateCreated: Date
     
     init(name: String, valueInDollars: Int, serialNumber: String?) {
         self.name = name
@@ -34,7 +34,7 @@ class Item: NSObject {
             let randomValue = Int(arc4random_uniform(100))
             let randomSerialNumber =
                 UUID().uuidString.components(separatedBy: "-").first!
-            print(randomSerialNumber)
+            print(random)
             self.init(name: randomName,
                       valueInDollars: randomValue,
                       serialNumber: randomSerialNumber)

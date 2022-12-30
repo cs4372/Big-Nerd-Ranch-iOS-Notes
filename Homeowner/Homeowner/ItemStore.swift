@@ -15,13 +15,11 @@ class ItemStore {
     @discardableResult func createItem() -> Item {
         let newItem = Item(random: true)
         allItems.append(newItem)
-        print(newItem)
         return newItem
     }
     
     func removeItem(_ item: Item) {
         if let index = allItems.firstIndex(of: item) {
-            print(index)
             allItems.remove(at: index)
         }
     }
