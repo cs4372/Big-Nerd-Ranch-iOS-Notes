@@ -10,6 +10,26 @@ import UIKit
 // Swift base class, does not inherit from any other class
 class ItemStore {
     var allItems = [Item]()
+
+    init() {
+        if let archivedItems =
+            NSKeyedUnarchiver.unarchiveObject(withFile: itemArchiveURL.path) as? [Item] {
+            allItems = archivedItems
+        }
+    }
+    
+    let itemArchiveURL: URL = {
+        let documentsDirectories =
+            FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        print("documentsDirectories", documentsDirectories)
+        let documentDirectory = documentsDirectories.first!
+        return documentDirectory.appendingPathComponent("items.archive")
+    }()
+    
+    func saveChanges() -> Bool {
+        print("Saving items to: \(itemArchiveURL.path)")
+        return NSKeyedArchiver.archiveRootObject(allItems, toFile: itemArchiveURL.path)
+    }
     
     //@discard annotation means a caller of this function is free to ignore the result of calling this function.
     @discardableResult func createItem() -> Item {

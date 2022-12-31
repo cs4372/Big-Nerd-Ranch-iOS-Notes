@@ -9,6 +9,7 @@ import UIKit
 
 class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
+    var imageStore: ImageStore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class ItemsViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("item view will appear")
         tableView.reloadData()
     }
     
@@ -30,7 +32,7 @@ class ItemsViewController: UITableViewController {
     @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         let newItem = itemStore.createItem()
          // Figure out where that item is in the array
-        let idx = itemStore.allItems.firstIndex(of: newItem)
+        _ = itemStore.allItems.firstIndex(of: newItem)
 
         if let index = itemStore.allItems.firstIndex(of: newItem) {
              let indexPath = IndexPath(row: index, section: 0)
@@ -56,6 +58,10 @@ class ItemsViewController: UITableViewController {
             // Remove the item from the store self.itemStore.removeItem(item)
                 // Also remove that row from the table view with an animation
                 self.itemStore.removeItem(item)
+                
+                // Remove the item's image from the image store
+                self.imageStore.deleteImage(forKey: item.itemKey)
+                
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
             })
             ac.addAction(deleteAction)
@@ -111,6 +117,7 @@ class ItemsViewController: UITableViewController {
                 let detailViewController
                         = segue.destination as! DetailViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
     } default:
             preconditionFailure("Unexpected segue identifier.")
         }

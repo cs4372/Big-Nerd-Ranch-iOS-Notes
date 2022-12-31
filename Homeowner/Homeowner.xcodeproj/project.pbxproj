@@ -22,6 +22,7 @@
 		476ACA88295CF89B00210A27 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA87295CF89B00210A27 /* ItemCell.swift */; };
 		476ACA8A295D20DC00210A27 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA89295D20DC00210A27 /* DetailViewController.swift */; };
 		476ACA8E295E50C800210A27 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA8D295E50C800210A27 /* DatePickerViewController.swift */; };
+		476ACA90295F6A2C00210A27 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476ACA8F295F6A2C00210A27 /* ImageStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		476ACA87295CF89B00210A27 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		476ACA89295D20DC00210A27 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		476ACA8D295E50C800210A27 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		476ACA8F295F6A2C00210A27 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		476ACA45295A2CD400210A27 = {
 			isa = PBXGroup;
 			children = (
+				476ACA8F295F6A2C00210A27 /* ImageStore.swift */,
 				476ACA50295A2CD400210A27 /* Homeowner */,
 				476ACA67295A2CD600210A27 /* HomeownerTests */,
 				476ACA71295A2CD600210A27 /* HomeownerUITests */,
@@ -279,6 +282,7 @@
 				476ACA84295A2E2500210A27 /* Item.swift in Sources */,
 				476ACA56295A2CD400210A27 /* ViewController.swift in Sources */,
 				476ACA8E295E50C800210A27 /* DatePickerViewController.swift in Sources */,
+				476ACA90295F6A2C00210A27 /* ImageStore.swift in Sources */,
 				476ACA86295A2F9E00210A27 /* ItemStore.swift in Sources */,
 				476ACA82295A2D9400210A27 /* ItemsViewController.swift in Sources */,
 				476ACA88295CF89B00210A27 /* ItemCell.swift in Sources */,

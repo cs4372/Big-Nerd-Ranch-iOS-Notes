@@ -14,6 +14,7 @@ class DatePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("datepicker load")
+        view.backgroundColor = UIColor.white
         datePicker = UIDatePicker()
         showDatePicker()
     }
